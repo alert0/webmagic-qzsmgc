@@ -1,0 +1,589 @@
+2015-12-30 14:32:32 INFO OOSpider:307 - Spider github.com started!
+2015-12-30 14:32:32 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft
+2015-12-30 14:32:35 INFO HttpClientDownloader:87 - downloading page https://github.com/pricing
+2015-12-30 14:32:35 INFO HttpClientDownloader:87 - downloading page https://github.com/login
+2015-12-30 14:32:35 INFO HttpClientDownloader:87 - downloading page https://github.com/explore
+2015-12-30 14:32:35 INFO HttpClientDownloader:87 - downloading page https://github.com/join
+2015-12-30 14:32:35 INFO HttpClientDownloader:87 - downloading page https://github.com/features
+2015-12-30 14:32:37 INFO HttpClientDownloader:87 - downloading page https://github.com/mailto
+2015-12-30 14:32:37 INFO HttpClientDownloader:87 - downloading page https://github.com/stars
+2015-12-30 14:32:37 INFO HttpClientDownloader:87 - downloading page https://github.com/webmagic
+2015-12-30 14:32:37 INFO HttpClientDownloader:87 - downloading page https://github.com/ipiaoniu
+2015-12-30 14:32:38 INFO HttpClientDownloader:87 - downloading page https://github.com/blog
+2015-12-30 14:32:38 INFO HttpClientDownloader:87 - downloading page https://github.com/about
+2015-12-30 14:32:39 INFO HttpClientDownloader:87 - downloading page https://github.com/site
+2015-12-30 14:32:39 INFO HttpClientDownloader:87 - downloading page https://github.com/security
+2015-12-30 14:32:39 INFO HttpClientDownloader:87 - downloading page https://github.com/contact
+2015-12-30 14:32:39 WARN HttpClientDownloader:100 - code error 404	https://github.com/site
+2015-12-30 14:32:39 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/followers
+2015-12-30 14:32:40 INFO HttpClientDownloader:87 - downloading page https://github.com/stars/code4craft
+2015-12-30 14:32:40 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/following
+2015-12-30 14:32:41 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/webmagic
+2015-12-30 14:32:41 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/netty
+2015-12-30 14:32:41 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/jsoup
+2015-12-30 14:32:41 WARN HttpClientDownloader:100 - code error 404	https://github.com/code4craft/netty
+2015-12-30 14:32:42 WARN HttpClientDownloader:104 - download page https://github.com/security error
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1497)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:212)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:275)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:254)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1479)
+	... 26 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:145)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:131)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 32 more
+2015-12-30 14:32:42 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/tiny
+2015-12-30 14:32:42 WARN HttpClientDownloader:100 - code error 404	https://github.com/code4craft/tiny
+2015-12-30 14:32:43 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/blackhole
+2015-12-30 14:32:43 INFO HttpClientDownloader:87 - downloading page https://github.com/ipiaoniu/piaoniu
+2015-12-30 14:32:43 INFO HttpClientDownloader:87 - downloading page https://github.com/ipiaoniu/ipiaoniu
+2015-12-30 14:32:43 WARN HttpClientDownloader:100 - code error 404	https://github.com/ipiaoniu/piaoniu
+2015-12-30 14:32:43 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft/mockmoon
+2015-12-30 14:32:43 WARN HttpClientDownloader:100 - code error 404	https://github.com/ipiaoniu/ipiaoniu
+2015-12-30 14:32:44 INFO HttpClientDownloader:87 - downloading page https://github.com/site/terms
+2015-12-30 14:32:44 INFO HttpClientDownloader:87 - downloading page https://github.com/site/privacy
+2015-12-30 14:32:45 INFO HttpClientDownloader:87 - downloading page https://github.com/signup
+2015-12-30 14:32:45 INFO HttpClientDownloader:87 - downloading page https://github.com/password_reset
+2015-12-30 14:32:45 INFO HttpClientDownloader:87 - downloading page https://github.com/rails
+2015-12-30 14:32:46 INFO HttpClientDownloader:87 - downloading page https://github.com/twbs
+2015-12-30 14:32:46 INFO HttpClientDownloader:87 - downloading page https://github.com/jquery
+2015-12-30 14:32:46 INFO HttpClientDownloader:87 - downloading page https://github.com/benbalter
+2015-12-30 14:32:47 INFO HttpClientDownloader:87 - downloading page https://github.com/skalnik
+2015-12-30 14:32:47 INFO HttpClientDownloader:87 - downloading page https://github.com/integrations
+2015-12-30 14:32:47 INFO HttpClientDownloader:87 - downloading page https://github.com/rails/rails
+2015-12-30 14:32:48 INFO HttpClientDownloader:87 - downloading page https://github.com/twbs/bootstrap
+2015-12-30 14:32:48 INFO HttpClientDownloader:87 - downloading page https://github.com/jquery/jquery
+2015-12-30 14:32:48 INFO HttpClientDownloader:87 - downloading page https://github.com/benbalter/dc
+2015-12-30 14:32:49 WARN HttpClientDownloader:100 - code error 404	https://github.com/benbalter/dc
+2015-12-30 14:32:49 INFO HttpClientDownloader:87 - downloading page https://github.com/skalnik/octocat
+2015-12-30 14:32:49 INFO HttpClientDownloader:87 - downloading page https://github.com/showcases
+2015-12-30 14:32:49 WARN HttpClientDownloader:100 - code error 404	https://github.com/skalnik/octocat
+2015-12-30 14:32:49 INFO HttpClientDownloader:87 - downloading page https://github.com/trending
+2015-12-30 14:32:50 INFO HttpClientDownloader:87 - downloading page https://github.com/hacksalot
+2015-12-30 14:32:50 INFO HttpClientDownloader:87 - downloading page https://github.com/tldr
+2015-12-30 14:32:51 INFO HttpClientDownloader:87 - downloading page https://github.com/FreeCodeCamp
+2015-12-30 14:32:51 INFO HttpClientDownloader:87 - downloading page https://github.com/mxstbr
+2015-12-30 14:34:51 INFO OOSpider:307 - Spider github.com started!
+2015-12-30 14:34:51 INFO HttpClientDownloader:87 - downloading page https://github.com/code4craft
+2015-12-30 14:34:52 WARN HttpClientDownloader:104 - download page https://github.com/code4craft error
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1497)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:212)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:275)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:254)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1479)
+	... 26 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:145)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:131)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 32 more
+2015-12-30 15:22:21 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:22:21 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:22:26 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_24_1160__1_ error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 15:23:05 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:23:05 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:23:10 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_24_1160__1_ error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 15:23:28 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:23:28 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:23:33 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_24_1160__1_ error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 15:27:39 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:27:39 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:28:25 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:28:25 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:28:27 ERROR Spider:326 - process request Request{url='http://qzsmgc.com/list/cun_hu_24_1160__1_', method='null', extras={statusCode=200}, priority=0} error
+org.jsoup.select.Selector$SelectorParseException: Could not parse query 'a[class='list']': unexpected token at 'class='list''
+	at us.codecraft.xsoup.XPathParser.byFunction(XPathParser.java:225)
+	at us.codecraft.xsoup.XPathParser.consumePredicates(XPathParser.java:202)
+	at us.codecraft.xsoup.XPathParser.findElements(XPathParser.java:138)
+	at us.codecraft.xsoup.XPathParser.parse(XPathParser.java:51)
+	at us.codecraft.xsoup.XPathParser.parse(XPathParser.java:375)
+	at us.codecraft.xsoup.XPathParser.combinator(XPathParser.java:85)
+	at us.codecraft.xsoup.XPathParser.parse(XPathParser.java:49)
+	at us.codecraft.xsoup.XPathParser.parse(XPathParser.java:375)
+	at us.codecraft.xsoup.Xsoup.compile(Xsoup.java:20)
+	at us.codecraft.webmagic.selector.XpathSelector.<init>(XpathSelector.java:21)
+	at us.codecraft.webmagic.selector.Selectors.xpath(Selectors.java:32)
+	at us.codecraft.webmagic.selector.HtmlNode.xpath(HtmlNode.java:42)
+	at Test.process(Test.java:42)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:420)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-30 15:28:38 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:28:38 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:30:49 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:30:49 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:33:56 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:33:56 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:34:05 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:34:05 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:34:37 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:34:37 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:35:21 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:35:21 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:35:35 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:35:35 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:36:27 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:36:27 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:37:23 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:37:23 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:38:01 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:38:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:40:43 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:40:43 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:44:41 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:44:41 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:44:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/list/cun_hu_show_nr_646530
+2015-12-30 15:44:52 WARN HttpClientDownloader:100 - code error 404	http://qzsmgc.com/list/list/cun_hu_show_nr_646530
+2015-12-30 15:45:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/list/cun_hu_show_nr_645806
+2015-12-30 15:45:02 WARN HttpClientDownloader:100 - code error 404	http://qzsmgc.com/list/list/cun_hu_show_nr_645806
+2015-12-30 15:46:07 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:46:07 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:46:23 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:46:23 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:46:35 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_646530
+2015-12-30 15:46:45 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645806
+2015-12-30 15:46:55 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645668
+2015-12-30 15:51:47 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:51:47 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:51:59 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_646530
+2015-12-30 15:52:09 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645806
+2015-12-30 15:52:19 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645668
+2015-12-30 15:56:36 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:56:36 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:56:39 WARN JsonFilePipeline:44 - write file error
+java.io.FileNotFoundException: D:\aaaa\qzsmgc.com\4fa71e39599d86b6e92cde334382bdcd.json (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at java.io.FileWriter.<init>(FileWriter.java:90)
+	at us.codecraft.webmagic.pipeline.JsonFilePipeline.process(JsonFilePipeline.java:40)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:424)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-30 15:56:49 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_646530
+2015-12-30 15:56:49 WARN JsonFilePipeline:44 - write file error
+java.io.FileNotFoundException: D:\aaaa\qzsmgc.com\3eb86404e0434b931323eb879274d1cf.json (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at java.io.FileWriter.<init>(FileWriter.java:90)
+	at us.codecraft.webmagic.pipeline.JsonFilePipeline.process(JsonFilePipeline.java:40)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:424)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-30 15:56:59 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645806
+2015-12-30 15:56:59 WARN JsonFilePipeline:44 - write file error
+java.io.FileNotFoundException: D:\aaaa\qzsmgc.com\d5cbe7e9e8add25cd353c6b9f69d49a0.json (系统找不到指定的路径。)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at java.io.FileWriter.<init>(FileWriter.java:90)
+	at us.codecraft.webmagic.pipeline.JsonFilePipeline.process(JsonFilePipeline.java:40)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:424)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2015-12-30 15:57:08 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 15:57:08 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 15:57:09 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645668
+2015-12-30 15:57:19 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178667
+2015-12-30 15:57:20 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_646530
+2015-12-30 15:57:29 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178636
+2015-12-30 15:57:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645806
+2015-12-30 15:57:39 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178585
+2015-12-30 15:57:40 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645668
+2015-12-30 15:57:49 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178576
+2015-12-30 15:57:50 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178667
+2015-12-30 15:57:59 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178543
+2015-12-30 15:58:00 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178636
+2015-12-30 15:58:09 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178508
+2015-12-30 15:58:10 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178585
+2015-12-30 15:58:19 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178456
+2015-12-30 15:58:20 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178576
+2015-12-30 15:58:29 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178434
+2015-12-30 15:58:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178543
+2015-12-30 15:58:40 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178414
+2015-12-30 15:58:41 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178508
+2015-12-30 15:58:50 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178400
+2015-12-30 15:58:51 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178456
+2015-12-30 15:59:00 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178381
+2015-12-30 15:59:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178434
+2015-12-30 15:59:10 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178358
+2015-12-30 15:59:11 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178414
+2015-12-30 15:59:20 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178334
+2015-12-30 15:59:21 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178400
+2015-12-30 15:59:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178318
+2015-12-30 15:59:31 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178381
+2015-12-30 15:59:40 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178288
+2015-12-30 15:59:41 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178358
+2015-12-30 15:59:50 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178266
+2015-12-30 15:59:51 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178334
+2015-12-30 16:00:00 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178257
+2015-12-30 16:00:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178318
+2015-12-30 16:00:10 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178249
+2015-12-30 16:00:11 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178288
+2015-12-30 16:00:20 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178234
+2015-12-30 16:00:21 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178266
+2015-12-30 16:00:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178216
+2015-12-30 16:00:31 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178257
+2015-12-30 16:00:41 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178199
+2015-12-30 16:00:41 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178249
+2015-12-30 16:00:51 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178183
+2015-12-30 16:00:51 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178234
+2015-12-30 16:01:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178178
+2015-12-30 16:01:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178216
+2015-12-30 16:01:11 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178162
+2015-12-30 16:01:18 INFO Spider:307 - Spider qzsmgc.com started!
+2015-12-30 16:01:18 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_24_1160__1_
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178456
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645806
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_645668
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178585
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178576
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_646530
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178667
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178636
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178543
+2015-12-30 16:01:30 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178508
+2015-12-30 16:01:35 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_show_nr_645668 error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 16:01:35 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_show_nr_178576 error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 16:01:35 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_show_nr_178667 error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 16:01:35 WARN HttpClientDownloader:104 - download page http://qzsmgc.com/list/cun_hu_show_nr_178543 error
+org.apache.http.conn.ConnectTimeoutException: Connect to qzsmgc.com:80 [qzsmgc.com/218.72.249.254] failed: connect timed out
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:132)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at us.codecraft.webmagic.downloader.HttpClientDownloader.download(HttpClientDownloader.java:92)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:408)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:322)
+	at us.codecraft.webmagic.selector.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 16 more
+2015-12-30 16:01:40 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178434
+2015-12-30 16:01:42 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178414
+2015-12-30 16:01:42 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178400
+2015-12-30 16:01:42 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178381
+2015-12-30 16:01:42 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178358
+2015-12-30 16:01:42 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178334
+2015-12-30 16:01:45 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178318
+2015-12-30 16:01:45 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178288
+2015-12-30 16:01:45 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178266
+2015-12-30 16:01:45 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178257
+2015-12-30 16:01:50 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178249
+2015-12-30 16:01:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178234
+2015-12-30 16:01:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178216
+2015-12-30 16:01:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178199
+2015-12-30 16:01:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178183
+2015-12-30 16:01:52 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178178
+2015-12-30 16:01:55 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178162
+2015-12-30 16:01:55 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178150
+2015-12-30 16:01:55 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178144
+2015-12-30 16:01:55 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_178130
+2015-12-30 16:02:01 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177641
+2015-12-30 16:02:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177548
+2015-12-30 16:02:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177544
+2015-12-30 16:02:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177533
+2015-12-30 16:02:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177519
+2015-12-30 16:02:02 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177512
+2015-12-30 16:02:05 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177493
+2015-12-30 16:02:05 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177479
+2015-12-30 16:02:05 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177472
+2015-12-30 16:02:06 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177421
+2015-12-30 16:02:11 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177414
+2015-12-30 16:02:12 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177406
+2015-12-30 16:02:12 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177398
+2015-12-30 16:02:12 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177393
+2015-12-30 16:02:12 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177386
+2015-12-30 16:02:12 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177292
+2015-12-30 16:02:15 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177213
+2015-12-30 16:02:16 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177173
+2015-12-30 16:02:16 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177149
+2015-12-30 16:02:16 INFO HttpClientDownloader:87 - downloading page http://qzsmgc.com/list/cun_hu_show_nr_177144
